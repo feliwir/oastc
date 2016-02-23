@@ -104,7 +104,7 @@ struct fp16
 
         } else {
             // Count the leading 0s in the uint16_t
-            int n = __lzcnt(v) - (sizeof(unsigned int) - sizeof(uint16_t)) * 8;
+            int n = clz(v) - (sizeof(unsigned int) - sizeof(uint16_t)) * 8;
 
             // Shift the mantissa up so bit 16 is the hidden 1 bit,
             // mask it off, then shift back down to 10 bits
@@ -134,7 +134,7 @@ struct fp16
             return 0;
 
         } else {
-            int n = __lzcnt(v) - (sizeof(unsigned int) - sizeof(uint16_t)) * 8;
+            int n = clz(v) - (sizeof(unsigned int) - sizeof(uint16_t)) * 8;
 
             uint32_t r = (((uint32_t)v << n) >> 5) * 255;
             r = ((r >> (10 + n)) + 1) >> 1;

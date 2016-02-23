@@ -21,7 +21,7 @@
  */
 
 #include "third_party/optionparser-1.3/optionparser.h"
-
+#include <string>
 struct Arg : public option::Arg
 {
     static void printError(const char* msg1, const option::Option& opt,

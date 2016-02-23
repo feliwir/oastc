@@ -25,8 +25,9 @@
 
 #include <algorithm>
 #include <cstdarg>
+#include <vector>
 #include <cstring>
-
+#include <utility>
 #include "fp16.h"
 #include "common.h"
 

@@ -21,7 +21,7 @@
  */
 
 #include <fstream>
-
+#include <vector>
 #include "oastc.h"
 
 #include "optionparser.h"

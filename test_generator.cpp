@@ -24,7 +24,7 @@
 
 #include <sstream>
 #include <fstream>
-
+#include <random>
 using namespace oastc;
 
 static bool VERBOSE_TEST = false;
